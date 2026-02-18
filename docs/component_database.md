@@ -81,3 +81,26 @@ power_consumption_w: 2.0
 ```
 
 The component will be automatically discovered by the registry on next import.
+
+---
+
+## Choosing Components by Mission Class
+
+| Mission Class | Band | Typical TX | Typical Space Antenna | Typical Ground Antenna | Data Rate |
+|--------------|------|-----------|----------------------|----------------------|-----------|
+| CubeSat TT&C | UHF | Endurosat UHF II (2W) | Monopole (5 dBi) | Yagi 10-el (14 dBi) | 1.2–19.2 kbps |
+| CubeSat downlink | S-band | ISIS TXS (2W) | Patch 2×2 (14 dBi) | 3.7m dish (34 dBi) | 256 kbps–1 Mbps |
+| Earth observation | X-band | Syrlinks EWC27 (5W) | Horn (20 dBi) | 3.7–7.3m dish (45–50 dBi) | 10–100 Mbps |
+| IoT / M2M | UHF | NanoAvionics (1W) | Monopole (5 dBi) | Yagi (14 dBi) | 1.2 kbps |
+| Deep space | X-band | 5–20W | High-gain (25+ dBi) | DSN 13–34m (50–60 dBi) | 1–256 kbps |
+
+### Datasheet Sources
+
+Component parameters are sourced from manufacturer datasheets and public technical documentation:
+
+- **Endurosat** — [UHF Transceiver II datasheet](https://www.endurosat.com/cubesat-store/cubesat-communication-modules/uhf-transceiver-ii/)
+- **ISIS** — [TXS S-band transmitter](https://www.isispace.nl/product/s-band-transmitter/)
+- **Syrlinks** — [EWC27 X-band transmitter](https://www.syrlinks.com/en/products/x-band-transmitters)
+- **KSAT** — [Svalbard and TrollSat ground station network](https://www.ksat.no/services/ground-station-services/)
+- **NASA DSN** — [Deep Space Network capabilities](https://www.nasa.gov/directorates/heo/scan/services/networks/deep-space-network)
+- **SatNOGS** — [Open-source ground station network](https://satnogs.org/)

@@ -20,6 +20,12 @@ dependencies = [
 [project.scripts]
 satlinkbudget = "satlinkbudget.__main__:main"
 
+[project.optional-dependencies]
+sgp4 = ["sgp4>=2.20"]
+skyfield = ["skyfield>=1.45"]
+all = ["sgp4>=2.20", "skyfield>=1.45"]
+dev = ["pytest>=7.0", "pytest-cov>=4.0", "sgp4>=2.20", "skyfield>=1.45"]
+
 [tool.hatch.version]
 path = "src/satlinkbudget/_version.py"
 

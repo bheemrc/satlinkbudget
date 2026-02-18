@@ -190,3 +190,36 @@ Sun-synchronous orbits use this RAAN drift to maintain a constant local solar ti
 ```
 
 Maximum Doppler occurs at horizon crossing. For 500 km altitude at UHF (437 MHz): Δf_max ≈ ±10 kHz.
+
+**Numerical example:** v_orbital ≈ 7,613 m/s at 500 km. Δf_max = 437×10⁶ × 7613 / 2.998×10⁸ ≈ 11.1 kHz.
+
+---
+
+## Numerical Reference Values
+
+Quick-reference values for validating calculations:
+
+| Quantity | Parameters | Value |
+|----------|-----------|-------|
+| FSPL | 1 km, 1 GHz | 92.45 dB |
+| FSPL | 909 km, 437 MHz | 144.43 dB |
+| Slant range | 500 km alt, 30° el | 909.5 km |
+| Slant range | 500 km alt, 90° el | 500.0 km |
+| Orbital period | 500 km circular | 5,670 s (94.5 min) |
+| Orbital velocity | 500 km circular | 7,613 m/s |
+| Boltzmann constant | — | −228.6 dBW/K/Hz |
+| Parabolic gain | 3.7 m, 8.2 GHz, η=0.55 | 45.9 dBi |
+
+## Further Reading
+
+- **ITU-R P.676-13** — Attenuation by atmospheric gases
+- **ITU-R P.618-14** — Earth-space rain attenuation prediction
+- **ITU-R P.838-3** — Specific rain attenuation model
+- **ITU-R P.840-8** — Cloud and fog attenuation
+- **ITU-R P.531-14** — Ionospheric propagation effects
+- **CCSDS 401.0-B** — RF and Modulation Systems
+- **CCSDS 131.0-B** — TM Synchronization and Channel Coding
+- **SMAD** — Wertz, Everett, Puschell (eds.), *Space Mission Engineering*, 4th ed., Chapter 13
+- **Roddy** — *Satellite Communications*, 4th ed., McGraw-Hill
+- **Maral & Bousquet** — *Satellite Communications Systems*, 5th ed., Wiley
+- **Proakis** — *Digital Communications*, 5th ed., McGraw-Hill (BER curves)

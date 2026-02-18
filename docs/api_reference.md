@@ -251,6 +251,55 @@ print(result.to_text())
 fig = result.plot_waterfall()
 ```
 
+### `compute_max_data_rate()`
+
+Compute the maximum data rate that closes the link with a given margin:
+
+```python
+max_rate = compute_max_data_rate(
+    transmitter=tx,
+    receiver=rx,
+    frequency_hz=437e6,
+    distance_m=1200e3,
+    required_eb_n0_db=5.6,
+    target_margin_db=3.0,
+    atmospheric_loss_db=0.5,
+)
+print(f"Max data rate: {max_rate:,.0f} bps")
+```
+
+### `compute_required_power_dbw()`
+
+Compute the minimum TX power to close the link:
+
+```python
+min_power = compute_required_power_dbw(
+    receiver=rx,
+    frequency_hz=437e6,
+    distance_m=1200e3,
+    data_rate_bps=9600,
+    required_eb_n0_db=5.6,
+    target_margin_db=3.0,
+    tx_antenna_gain_dbi=5.15,
+)
+print(f"Min TX power: {min_power:+.1f} dBW")
+```
+
+### Plot Methods
+
+```python
+# Waterfall chart — returns matplotlib Figure
+fig = result.plot_waterfall()
+fig.savefig("waterfall.png", dpi=150)
+
+# Pass simulation plots
+results = sim.run(duration_orbits=24)
+fig = results.plot_pass_elevation(0)     # elevation vs time
+fig = results.plot_pass_margin(0)        # margin vs time
+fig = results.plot_doppler(0)            # Doppler shift vs time
+fig = results.plot_data_volume_cumulative()  # data volume per pass
+```
+
 ---
 
 ## Orbit & Contacts
@@ -270,6 +319,29 @@ gs = GroundStation(name="Svalbard", latitude_deg=78.23, longitude_deg=15.39, alt
 contacts = find_contacts(orbit, gs, duration_s=86400, dt_s=10.0)
 print(f"Passes: {contacts.num_contacts}")
 
-for window in contacts.windows:
+for window in contacts.contacts:
     print(f"  {window.duration_s:.0f}s, max el: {window.max_elevation_deg:.1f}°")
+```
+
+---
+
+## Contrib: Optional Integration Adapters
+
+### SGP4 TLE Propagation
+
+```python
+from satlinkbudget.contrib._sgp4 import orbit_from_tle, HAS_SGP4
+
+orbit = orbit_from_tle(line1, line2)  # requires pip install sgp4
+state = orbit.propagate(0.0)          # OrbitState with ECI position/velocity
+# Works with find_contacts() and PassSimulation
+```
+
+### Skyfield High-Precision Ephemeris
+
+```python
+from satlinkbudget.contrib._skyfield import orbit_from_skyfield, ground_station_from_skyfield
+
+orbit = orbit_from_skyfield(satellite, ts)  # requires pip install skyfield
+gs = ground_station_from_skyfield("Name", topos)
 ```
