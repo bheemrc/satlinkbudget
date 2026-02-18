@@ -1,10 +1,13 @@
 # satlinkbudget
 
-**Aerospace-grade satellite link budget analysis for Python.**
+**Satellite link budget analysis library for Python.**
 
 ![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue)
 ![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-green)
-![Tests: 371](https://img.shields.io/badge/tests-371%20passing-brightgreen)
+![Tests: 399](https://img.shields.io/badge/tests-399%20passing-brightgreen)
+![Status: Development](https://img.shields.io/badge/status-development-yellow)
+
+> **Note:** This library is under active development. Models are validated against analytical references and textbook examples (see [Validation](docs/validation.md)), but it has **not been validated against real mission telemetry or flight data**. Users should independently verify results before using them for mission-critical decisions. Use at your own risk.
 
 ---
 
@@ -247,7 +250,7 @@ See [Standards References](docs/standards_references.md) for implementation deta
 
 ## Validation
 
-All models are validated against analytical reference values, ITU-R published data, and textbook examples:
+Models are validated against analytical reference values, ITU-R published data, and textbook examples. These are **reference-level cross-checks**, not flight-data validation:
 
 - FSPL: 1 km @ 1 GHz = 92.45 dB (exact)
 - P.676: 60 GHz O₂ peak ~15 dB/km (within ±1 dB/km)
@@ -308,7 +311,7 @@ See [Component Database](docs/component_database.md) for the full catalog.
 ## Testing
 
 ```bash
-# Full suite (371 tests)
+# Full suite (399 tests)
 .venv/bin/pytest tests/ -v
 
 # Specific module
@@ -325,7 +328,7 @@ Contributions are welcome. Please:
 1. Fork the repository
 2. Create a feature branch
 3. Add tests for new functionality
-4. Ensure all 371+ tests pass
+4. Ensure all 399+ tests pass
 5. Submit a pull request
 
 ---

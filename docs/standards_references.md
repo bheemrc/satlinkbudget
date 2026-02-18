@@ -1,6 +1,8 @@
 # Standards References
 
-satlinkbudget implements models from international telecommunications and space standards. This document describes each standard, how it is implemented, and what simplifications are made.
+satlinkbudget implements simplified models based on international telecommunications and space standards. This document describes each standard, how it is implemented, and what simplifications are made.
+
+> **Note:** Implementations are simplified forms of the referenced standards, suitable for preliminary design and educational use. They do not constitute full compliance with the cited ITU-R recommendations or CCSDS standards. Refer to the original standard documents for authoritative procedures.
 
 ---
 

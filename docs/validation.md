@@ -1,16 +1,18 @@
 # Validation
 
-satlinkbudget is validated against analytical reference values, published ITU-R data, and textbook examples. This document summarizes the validation evidence and test coverage.
+satlinkbudget models are cross-checked against analytical reference values, published ITU-R data, and textbook examples. This document summarizes the validation evidence and test coverage.
+
+> **Important:** All validation below is against **analytical formulas, published standards data, and textbook worked examples** — not against measured flight telemetry or real mission data. This library has not been operationally validated on any satellite mission. Users should treat results as engineering estimates and independently verify critical calculations before use in mission design or operations.
 
 ---
 
 ## Validation Philosophy
 
-Each physics model is validated at three levels:
+Each physics model is cross-checked at three levels:
 
 1. **Unit-level:** Individual functions tested against hand-calculated or published reference values
-2. **Cross-model:** Combined calculations (e.g., FSPL + atmospheric + noise) verified against end-to-end textbook examples
-3. **Integration:** Full pass simulations compared against independent tools and published mission analyses
+2. **Cross-model:** Combined calculations (e.g., FSPL + atmospheric + noise) compared against end-to-end textbook examples
+3. **Integration:** Full pass simulations checked for self-consistency and compared against published mission analysis examples
 
 Tolerances are chosen based on the model fidelity: exact analytical results match to floating-point precision; empirical models (ITU-R) match to within documented uncertainty bounds.
 
@@ -139,10 +141,19 @@ Analytical formula — matches to floating-point precision.
 | `api` (schemas, services) | ~35 | Request/response validation |
 | `validation` (checks) | ~15 | Sanity check tests |
 | `integration` (end-to-end) | ~31 | Full pipeline tests |
-| **Total** | **371** | |
+| **Total** | **399** | |
 
 All tests pass. Run with:
 
 ```bash
 .venv/bin/pytest tests/ -v
 ```
+
+---
+
+## Limitations
+
+- Atmospheric models use simplified forms of the ITU-R recommendations (e.g., Annex 2 wideband model for P.676, not the full line-by-line summation). See [Standards References](standards_references.md) for details on each simplification.
+- Orbit propagation uses circular Keplerian with J2 secular perturbation only. No drag, solar radiation pressure, or higher-order perturbations.
+- Component datasheets are derived from publicly available specifications and may not reflect actual measured performance of specific hardware units.
+- No validation has been performed against real satellite telemetry, ground station measurements, or operational mission data.

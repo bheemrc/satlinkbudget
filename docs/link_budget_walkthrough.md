@@ -1,6 +1,8 @@
 # Link Budget Walkthrough
 
-A step-by-step worked example of a complete RF link budget for a 3U CubeSat UHF downlink, explaining every term, every sign convention, and every standard referenced. This is the flagship document for engineers evaluating satlinkbudget.
+A step-by-step worked example of a complete RF link budget for a 3U CubeSat UHF downlink, explaining every term, every sign convention, and every standard referenced.
+
+> **Note:** Numerical results in this walkthrough are based on analytical models and textbook parameters. They are intended for educational and preliminary design purposes. Actual mission link budgets require measured hardware parameters, site-specific atmospheric data, and independent verification.
 
 ---
 

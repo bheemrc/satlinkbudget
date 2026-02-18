@@ -1,5 +1,7 @@
 # Getting Started
 
+> **Usage note:** satlinkbudget is a development-stage library. Models are cross-checked against analytical references and textbook examples, but have not been validated against real mission data. Always independently verify results before relying on them for mission-critical decisions.
+
 ## Installation
 
 ### From PyPI (when published)
