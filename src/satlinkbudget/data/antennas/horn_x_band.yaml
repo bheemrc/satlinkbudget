@@ -1,0 +1,8 @@
+name: "Horn X-Band Antenna"
+type: "horn"
+gain_dbi: 20.0
+frequency_hz: 8.2e9
+beamwidth_deg: 15.0
+num_elements: 1
+polarization: "linear_v"
+mass_kg: 0.8

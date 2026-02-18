@@ -1,0 +1,8 @@
+name: "Helix UHF Antenna"
+type: "helix"
+gain_dbi: 12.5
+frequency_hz: 437.0e6
+beamwidth_deg: 35.0
+num_elements: 1
+polarization: "rhcp"
+mass_kg: 0.5

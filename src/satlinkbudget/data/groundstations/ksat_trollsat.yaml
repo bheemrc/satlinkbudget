@@ -1,0 +1,13 @@
+name: "KSAT TrollSat"
+operator: "KSAT"
+latitude_deg: -72.01
+longitude_deg: 2.53
+altitude_m: 1270.0
+min_elevation_deg: 5.0
+antenna_diameter_m: 3.7
+antenna_gain_dbi: 46.0
+antenna_type: "parabolic"
+system_noise_temp_k: 120.0
+lna_noise_figure_db: 0.8
+frequency_bands: ["S", "X"]
+polarization: "rhcp"

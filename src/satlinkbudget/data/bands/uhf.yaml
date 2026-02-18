@@ -1,0 +1,9 @@
+name: "UHF Amateur Satellite"
+designation: "UHF"
+uplink_min_hz: 435.0e6
+uplink_max_hz: 438.0e6
+downlink_min_hz: 435.0e6
+downlink_max_hz: 438.0e6
+typical_eirp_dbw: 3.0
+max_bandwidth_hz: 25.0e3
+notes: "ITU amateur satellite allocation. Popular CubeSat band."

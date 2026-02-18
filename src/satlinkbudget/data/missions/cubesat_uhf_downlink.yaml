@@ -1,0 +1,22 @@
+name: "CubeSat UHF Downlink"
+frequency_hz: 437.0e6
+orbit:
+  altitude_km: 500
+  inclination_deg: 97.4
+transmitter:
+  transceiver: "endurosat_uhf_transceiver_ii"
+  antenna: "monopole_uhf_qw"
+  pointing_error_deg: 5.0
+receiver:
+  ground_station: "satnogs_generic_uhf"
+modem:
+  modulation: "BPSK"
+  coding: "convolutional_r12"
+  data_rate_bps: 9600
+  implementation_loss_db: 1.0
+atmosphere:
+  rain_rate_001_mm_h: 0.0
+  latitude_deg: 52.0
+simulation:
+  duration_orbits: 24
+  dt_s: 1.0

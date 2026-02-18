@@ -1,0 +1,8 @@
+name: "Patch Array S-Band 2x2"
+type: "patch"
+gain_dbi: 12.0
+frequency_hz: 2.2e9
+beamwidth_deg: 35.0
+num_elements: 4
+polarization: "rhcp"
+mass_kg: 0.1

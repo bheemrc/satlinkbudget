@@ -1,0 +1,9 @@
+name: "Parabolic Dish 13m"
+type: "parabolic"
+gain_dbi: 57.0
+frequency_hz: 8.2e9
+beamwidth_deg: 0.2
+diameter_m: 13.0
+efficiency: 0.55
+polarization: "rhcp"
+mass_kg: 3000.0

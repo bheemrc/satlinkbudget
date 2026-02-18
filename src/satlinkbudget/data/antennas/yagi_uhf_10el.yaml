@@ -1,0 +1,8 @@
+name: "Yagi UHF 10-Element"
+type: "yagi"
+gain_dbi: 14.0
+frequency_hz: 437.0e6
+beamwidth_deg: 30.0
+num_elements: 10
+polarization: "linear_v"
+mass_kg: 2.0

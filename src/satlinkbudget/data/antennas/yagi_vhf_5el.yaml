@@ -1,0 +1,8 @@
+name: "Yagi VHF 5-Element"
+type: "yagi"
+gain_dbi: 9.0
+frequency_hz: 145.9e6
+beamwidth_deg: 50.0
+num_elements: 5
+polarization: "linear_v"
+mass_kg: 3.5

@@ -1,0 +1,9 @@
+name: "Optical Free-Space Communication"
+designation: "Optical"
+uplink_min_hz: 187.5e12
+uplink_max_hz: 375.0e12
+downlink_min_hz: 187.5e12
+downlink_max_hz: 375.0e12
+typical_eirp_dbw: 10.0
+max_bandwidth_hz: 10.0e9
+notes: "Free-space optical (laser) communication. 800-1600 nm. Weather-dependent."

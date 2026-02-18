@@ -1,0 +1,9 @@
+name: "Parabolic Dish 2.4m"
+type: "parabolic"
+gain_dbi: 34.0
+frequency_hz: 2.2e9
+beamwidth_deg: 4.0
+diameter_m: 2.4
+efficiency: 0.55
+polarization: "rhcp"
+mass_kg: 50.0

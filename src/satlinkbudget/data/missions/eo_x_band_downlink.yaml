@@ -1,0 +1,22 @@
+name: "Earth Observation X-Band Downlink"
+frequency_hz: 8.2e9
+orbit:
+  altitude_km: 600
+  inclination_deg: 97.8
+transmitter:
+  transceiver: "syrlinks_ewc27_x_band"
+  antenna: "horn_x_band"
+  pointing_error_deg: 1.0
+receiver:
+  ground_station: "ksat_svalbard"
+modem:
+  modulation: "QPSK"
+  coding: "ldpc_r34"
+  data_rate_bps: 50.0e6
+  implementation_loss_db: 2.0
+atmosphere:
+  rain_rate_001_mm_h: 5.0
+  latitude_deg: 78.0
+simulation:
+  duration_orbits: 24
+  dt_s: 1.0

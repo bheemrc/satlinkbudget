@@ -1,0 +1,9 @@
+name: "VHF Amateur Satellite"
+designation: "VHF"
+uplink_min_hz: 145.8e6
+uplink_max_hz: 146.0e6
+downlink_min_hz: 145.8e6
+downlink_max_hz: 146.0e6
+typical_eirp_dbw: 0.0
+max_bandwidth_hz: 25.0e3
+notes: "ITU amateur satellite allocation. 200 kHz bandwidth."

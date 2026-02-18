@@ -1,0 +1,13 @@
+name: "NASA DSN Madrid"
+operator: "NASA/JPL"
+latitude_deg: 40.43
+longitude_deg: -4.25
+altitude_m: 830.0
+min_elevation_deg: 6.0
+antenna_diameter_m: 34.0
+antenna_gain_dbi: 68.0
+antenna_type: "parabolic"
+system_noise_temp_k: 25.0
+lna_noise_figure_db: 0.3
+frequency_bands: ["S", "X", "Ka"]
+polarization: "rhcp"

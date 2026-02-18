@@ -1,0 +1,13 @@
+name: "SatNOGS Generic UHF Station"
+operator: "SatNOGS Community"
+latitude_deg: 52.0
+longitude_deg: 13.0
+altitude_m: 50.0
+min_elevation_deg: 10.0
+antenna_diameter_m: 0.0
+antenna_gain_dbi: 14.0
+antenna_type: "yagi"
+system_noise_temp_k: 500.0
+lna_noise_figure_db: 1.5
+frequency_bands: ["UHF"]
+polarization: "linear_v"

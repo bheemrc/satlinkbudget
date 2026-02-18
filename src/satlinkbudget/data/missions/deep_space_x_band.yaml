@@ -1,0 +1,24 @@
+name: "Deep Space X-Band Downlink"
+frequency_hz: 8.4e9
+orbit:
+  altitude_km: 400000
+  inclination_deg: 23.5
+transmitter:
+  power_dbm: 43.0
+  antenna_gain_dbi: 36.0
+  feed_loss_db: 0.5
+  pointing_error_deg: 0.1
+receiver:
+  ground_station: "dsn_goldstone"
+modem:
+  modulation: "BPSK"
+  coding: "turbo_r12"
+  data_rate_bps: 256000
+  implementation_loss_db: 1.5
+atmosphere:
+  rain_rate_001_mm_h: 3.0
+  latitude_deg: 35.0
+simulation:
+  duration_orbits: 1
+  dt_s: 10.0
+  contact_dt_s: 60.0

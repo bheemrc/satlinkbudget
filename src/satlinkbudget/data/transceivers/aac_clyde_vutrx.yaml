@@ -1,0 +1,9 @@
+name: "AAC Clyde VUTRX"
+manufacturer: "AAC Clyde Space"
+frequency_hz: 145.9e6
+tx_power_dbm: 30.0
+rx_sensitivity_dbm: -120.0
+data_rate_bps: 1200
+modulation: "BPSK"
+mass_kg: 0.15
+power_consumption_w: 2.0

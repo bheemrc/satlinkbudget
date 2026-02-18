@@ -1,0 +1,9 @@
+name: "X-Band Earth Exploration"
+designation: "X"
+uplink_min_hz: 7.145e9
+uplink_max_hz: 7.235e9
+downlink_min_hz: 8.025e9
+downlink_max_hz: 8.500e9
+typical_eirp_dbw: 15.0
+max_bandwidth_hz: 375.0e6
+notes: "High-rate Earth observation downlink. Common for EO missions."

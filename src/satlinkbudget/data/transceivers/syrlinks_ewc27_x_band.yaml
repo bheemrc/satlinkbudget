@@ -1,0 +1,9 @@
+name: "Syrlinks EWC27 X-Band Transmitter"
+manufacturer: "Syrlinks"
+frequency_hz: 8.2e9
+tx_power_dbm: 33.0
+rx_sensitivity_dbm: -100.0
+data_rate_bps: 50.0e6
+modulation: "QPSK"
+mass_kg: 0.35
+power_consumption_w: 12.0

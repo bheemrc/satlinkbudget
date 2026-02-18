@@ -1,0 +1,9 @@
+name: "Ku-Band Fixed Satellite Service"
+designation: "Ku"
+uplink_min_hz: 14.0e9
+uplink_max_hz: 14.5e9
+downlink_min_hz: 11.7e9
+downlink_max_hz: 12.2e9
+typical_eirp_dbw: 20.0
+max_bandwidth_hz: 500.0e6
+notes: "Fixed satellite service. Used for broadcast and VSAT."

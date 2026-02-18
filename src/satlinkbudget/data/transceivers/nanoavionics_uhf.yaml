@@ -1,0 +1,9 @@
+name: "NanoAvionics UHF Transceiver"
+manufacturer: "NanoAvionics"
+frequency_hz: 437.0e6
+tx_power_dbm: 30.0
+rx_sensitivity_dbm: -117.0
+data_rate_bps: 9600
+modulation: "BPSK"
+mass_kg: 0.085
+power_consumption_w: 2.5

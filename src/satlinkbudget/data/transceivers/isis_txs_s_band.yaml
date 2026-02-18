@@ -1,0 +1,9 @@
+name: "ISIS TXS S-Band Transmitter"
+manufacturer: "ISIS"
+frequency_hz: 2.2e9
+tx_power_dbm: 33.0
+rx_sensitivity_dbm: -105.0
+data_rate_bps: 1.0e6
+modulation: "QPSK"
+mass_kg: 0.075
+power_consumption_w: 5.0

@@ -1,0 +1,9 @@
+name: "Ka-Band Broadband"
+designation: "Ka"
+uplink_min_hz: 27.5e9
+uplink_max_hz: 31.0e9
+downlink_min_hz: 17.7e9
+downlink_max_hz: 21.2e9
+typical_eirp_dbw: 25.0
+max_bandwidth_hz: 2.0e9
+notes: "High-throughput broadband satellite. Rain-sensitive."

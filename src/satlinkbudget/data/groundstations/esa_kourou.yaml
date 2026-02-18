@@ -1,0 +1,13 @@
+name: "ESA Kourou"
+operator: "ESA/ESTRACK"
+latitude_deg: 5.25
+longitude_deg: -52.77
+altitude_m: 10.0
+min_elevation_deg: 5.0
+antenna_diameter_m: 15.0
+antenna_gain_dbi: 58.0
+antenna_type: "parabolic"
+system_noise_temp_k: 90.0
+lna_noise_figure_db: 0.5
+frequency_bands: ["S", "X"]
+polarization: "rhcp"

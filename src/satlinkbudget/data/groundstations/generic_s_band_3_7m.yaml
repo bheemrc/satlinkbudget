@@ -1,0 +1,13 @@
+name: "Generic S-Band 3.7m Station"
+operator: "Generic"
+latitude_deg: 45.0
+longitude_deg: 0.0
+altitude_m: 100.0
+min_elevation_deg: 5.0
+antenna_diameter_m: 3.7
+antenna_gain_dbi: 34.0
+antenna_type: "parabolic"
+system_noise_temp_k: 150.0
+lna_noise_figure_db: 1.0
+frequency_bands: ["S"]
+polarization: "rhcp"

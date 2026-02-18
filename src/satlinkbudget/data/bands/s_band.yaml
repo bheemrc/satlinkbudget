@@ -1,0 +1,9 @@
+name: "S-Band Space Operation"
+designation: "S"
+uplink_min_hz: 2.025e9
+uplink_max_hz: 2.120e9
+downlink_min_hz: 2.200e9
+downlink_max_hz: 2.300e9
+typical_eirp_dbw: 10.0
+max_bandwidth_hz: 5.0e6
+notes: "Near-Earth space operation and research. Widely used for LEO."
