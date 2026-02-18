@@ -346,6 +346,13 @@ Contributions are welcome. Please:
 
 ---
 
+## Acknowledgments
+
+- [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (Anthropic) for AI-assisted development
+- ITU-R Radiocommunication Sector for atmospheric propagation models (P.676, P.618, P.838, P.840, P.531)
+- CCSDS for RF/modulation and channel coding standards (401.0-B, 131.0-B)
+- Wertz & Larson, *Space Mission Analysis and Design* (SMAD) for link budget reference values
+
 ## License
 
 Apache 2.0 — see [LICENSE](LICENSE) for details.
