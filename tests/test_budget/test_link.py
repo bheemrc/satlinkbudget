@@ -110,6 +110,47 @@ class TestComputeMaxDataRate:
         assert r2 > r1
 
 
+class TestInputValidation:
+    def test_link_budget_rejects_negative_frequency(self):
+        tx = TransmitterChain(power_dbw=3.0, antenna_gain_dbi=5.0)
+        rx = ReceiverChain(antenna_gain_dbi=14.0, system_noise_temp_k=500.0)
+        with pytest.raises(ValueError, match="frequency"):
+            compute_link_budget(tx, rx, -1.0, 1000e3, 9600, 9.6)
+
+    def test_link_budget_rejects_zero_distance(self):
+        tx = TransmitterChain(power_dbw=3.0, antenna_gain_dbi=5.0)
+        rx = ReceiverChain(antenna_gain_dbi=14.0, system_noise_temp_k=500.0)
+        with pytest.raises(ValueError, match="distance"):
+            compute_link_budget(tx, rx, 437e6, 0.0, 9600, 9.6)
+
+    def test_link_budget_rejects_zero_data_rate(self):
+        tx = TransmitterChain(power_dbw=3.0, antenna_gain_dbi=5.0)
+        rx = ReceiverChain(antenna_gain_dbi=14.0, system_noise_temp_k=500.0)
+        with pytest.raises(ValueError, match="data_rate"):
+            compute_link_budget(tx, rx, 437e6, 1000e3, 0.0, 9.6)
+
+    def test_max_data_rate_rejects_negative_frequency(self):
+        tx = TransmitterChain(power_dbw=3.0, antenna_gain_dbi=5.0)
+        rx = ReceiverChain(antenna_gain_dbi=14.0, system_noise_temp_k=500.0)
+        with pytest.raises(ValueError, match="frequency"):
+            compute_max_data_rate(tx, rx, -1.0, 1000e3, 9.6)
+
+    def test_required_power_rejects_negative_frequency(self):
+        rx = ReceiverChain(antenna_gain_dbi=14.0, system_noise_temp_k=500.0)
+        with pytest.raises(ValueError, match="frequency"):
+            compute_required_power_dbw(rx, -1.0, 1000e3, 9600, 9.6)
+
+    def test_required_power_rejects_zero_distance(self):
+        rx = ReceiverChain(antenna_gain_dbi=14.0, system_noise_temp_k=500.0)
+        with pytest.raises(ValueError, match="distance"):
+            compute_required_power_dbw(rx, 437e6, 0.0, 9600, 9.6)
+
+    def test_required_power_rejects_zero_data_rate(self):
+        rx = ReceiverChain(antenna_gain_dbi=14.0, system_noise_temp_k=500.0)
+        with pytest.raises(ValueError, match="data_rate"):
+            compute_required_power_dbw(rx, 437e6, 1000e3, 0.0, 9.6)
+
+
 class TestComputeRequiredPower:
     def test_reasonable_power(self):
         """Required power should be in reasonable range for CubeSat."""

@@ -32,8 +32,8 @@ class TestEndToEnd:
             atmospheric_loss_db=0.5,
         )
         resp = run_link_budget(req)
-        assert resp.link_closes
-        assert resp.margin_db > 5.0
+        assert resp.summary.link_closes
+        assert resp.summary.margin_db > 5.0
 
     def test_api_import(self):
         """API layer is importable."""
@@ -67,5 +67,5 @@ class TestEndToEnd:
             dt_s=5.0,
         )
         resp = run_pass_simulation(req)
-        assert resp.num_passes >= 0
+        assert resp.summary.num_passes >= 0
         assert "REPORT" in resp.text_report

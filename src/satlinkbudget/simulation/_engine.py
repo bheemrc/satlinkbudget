@@ -12,7 +12,6 @@ from satlinkbudget.orbit._propagator import Orbit
 from satlinkbudget.orbit._groundstation import GroundStation, OMEGA_EARTH, elevation_angle
 from satlinkbudget.orbit._contact import find_contacts
 from satlinkbudget.orbit._doppler import radial_velocity, doppler_shift
-from satlinkbudget.rf._path_loss import slant_range as compute_slant_range
 from satlinkbudget.atmosphere._total import compute_atmospheric_losses
 from satlinkbudget.simulation._results import PassData, PassSimulationResults
 
@@ -94,8 +93,8 @@ class PassSimulation:
                 el = elevation_angle(state.position_eci, gs_pos)
                 elevations[i] = el
 
-                # Slant range
-                sr = compute_slant_range(self.orbit.altitude_m, max(el, 1.0))
+                # Slant range from actual satellite-GS vector distance
+                sr = float(np.linalg.norm(state.position_eci - gs_pos))
                 ranges_m[i] = sr
 
                 # Atmospheric losses

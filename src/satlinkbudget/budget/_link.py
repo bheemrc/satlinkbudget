@@ -54,6 +54,13 @@ def compute_link_budget(
     LinkBudgetResult
         Complete link budget with all line items.
     """
+    if frequency_hz <= 0.0:
+        raise ValueError("frequency_hz must be positive")
+    if distance_m <= 0.0:
+        raise ValueError("distance_m must be positive")
+    if data_rate_bps <= 0.0:
+        raise ValueError("data_rate_bps must be positive")
+
     eirp = transmitter.eirp_dbw
     g_over_t = receiver.figure_of_merit_db_per_k
     fspl = free_space_path_loss_db(distance_m, frequency_hz)
@@ -122,6 +129,11 @@ def compute_max_data_rate(
     float
         Maximum data rate [bps]. Returns 0 if link cannot close.
     """
+    if frequency_hz <= 0.0:
+        raise ValueError("frequency_hz must be positive")
+    if distance_m <= 0.0:
+        raise ValueError("distance_m must be positive")
+
     eirp = transmitter.eirp_dbw
     g_over_t = receiver.figure_of_merit_db_per_k
     fspl = free_space_path_loss_db(distance_m, frequency_hz)
@@ -164,6 +176,13 @@ def compute_required_power_dbw(
     float
         Required TX power [dBW].
     """
+    if frequency_hz <= 0.0:
+        raise ValueError("frequency_hz must be positive")
+    if distance_m <= 0.0:
+        raise ValueError("distance_m must be positive")
+    if data_rate_bps <= 0.0:
+        raise ValueError("data_rate_bps must be positive")
+
     g_over_t = receiver.figure_of_merit_db_per_k
     fspl = free_space_path_loss_db(distance_m, frequency_hz)
 
